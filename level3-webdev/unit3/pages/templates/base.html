@@ -1,0 +1,12 @@
+<!-- templates/base.html -->
+{% load static %} <!--New -->
+<header>
+    <img src="{% static 'images/PwALogo.png' %}" width="3%"> <!--New -->
+    <a href="{% url 'home' %}">Home</a> |
+    <a href="{% url 'about' %}">About</a> 
+</header>
+
+{% block content %}
+{% endblock content %}
+
+<footer>Python with AI Level 3</footer>
