@@ -1,0 +1,17 @@
+<!-- templates/base.html -->
+{% load static %} <!--new -->
+<html>
+    <head>
+        <title>My Super Blog</title>
+        <link rel="stylesheet" href="{% static 'css/base.css'  %}" >
+    </head>
+    <body>
+        <header>
+            <h1><a href="{% url 'home' %}" >Blog</a></h1>
+        </header>
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
