@@ -1,0 +1,12 @@
+<!-- templates/post_detail.html -->
+{% extends 'base.html' %}
+
+{% block content%}
+    <div class="post-entry"> 
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.body }}</p>   
+    </div>
+    <!--new-->
+    <p><a href="{% url 'post_edit' post.pk %}">+ Edit</a></p>
+    <p><a href="{% url 'post_delete' post.pk %}">+ Delete</a></p> <!-- new -->
+{% endblock content%}
