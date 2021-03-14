@@ -1,0 +1,14 @@
+<!-- templates/registration/signup.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %} <!--new -->
+
+{% block content%}
+<h2>Sign Up</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form | crispy}} <!--new -->
+    <!--{{ form.as_p }} -->
+    <!--new -->
+    <button type="submit" class="btn btn-success ml-2"  >Sign Up</button>
+</form>
+{% endblock content %}
