@@ -9,7 +9,7 @@ class HomePageView(ListView):
     template_name = "home.html"
     context_object_name = "all_posts_list"
 
-class BlogDetailView(DetailView): # new 
+class PostDetailView(DetailView): # new 
     model = Post
     template_name = 'post_detail.html'
     context_object_name = "post"
